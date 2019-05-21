@@ -1,4 +1,4 @@
-###Variables:
+### Variables:
 
 In scala there are two types of attributes. variables and values.
 
