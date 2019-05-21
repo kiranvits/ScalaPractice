@@ -56,12 +56,12 @@ object MissingNum {
   }
 
   def findMissingNum(list: List[Int], startNum: Int, lastNum:Int): Unit ={
-    val list_sorted = list.filter(x => (x >=startNum && x <=lastNum)).sortWith(_ < _)
+    val list_sorted = list.filter(x => x >=startNum && x <=lastNum).sortWith(_ < _)
     var missing_num = ListBuffer[Int]()
     println(list_sorted)
     var prevVal = startNum-1
     list_sorted.foreach(x => {
-      missing_num ++= (prevVal+1 to x-1).toList
+      missing_num ++= (prevVal+1 until x).toList
       prevVal=x
     })
     missing_num ++= (prevVal+1 to lastNum).toList

@@ -1,5 +1,3 @@
-package basics
-
 /**
   * Created by Kiran on 02-01-2019.
   * This class giving information on variable declaration and initialization

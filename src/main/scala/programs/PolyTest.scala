@@ -30,9 +30,7 @@ object PolyTest {
     var possWords = mutable.ArrayBuffer.empty[String]
     var possSet:HashSet[String] = HashSet.empty[String]
     str.foreach(char => {
-//      intermStr.append(char)
         intermStr += char
-//      (0 to intermStr.length-2).map(index => isPolyndrome(intermStr.substring(index).toString))
       (0 to intermStr.length-2).map(index => {
         possibleWords.append(intermStr.substring(index).toString)
         possSet.add(intermStr.substring(index).toString)
@@ -40,7 +38,6 @@ object PolyTest {
     })
     var polyWords = possibleWords.filter(isPolyndrome)
     var nonPolyWords = possibleWords.filter(x => !isPolyndrome(x))
-//    var polyWords = possibleWords.filter(str => str.equals(str.reverse))
     log.info(possibleWords.toString())
     println(possibleWords)
     println(possSet)

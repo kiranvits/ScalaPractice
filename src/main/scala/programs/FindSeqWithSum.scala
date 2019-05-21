@@ -20,17 +20,16 @@ object FindSeqWithSum {
 
   }
 
-  def findSeqMatchesSum1(vals:Array[Int],sum:Int): Array[String] = {
-    var possCom = for( i <- 0 to vals.length-1; j <- i+1 to vals.length-1 if vals(i) + vals (j) == sum  )
-      yield vals(i)+","+vals(j)
-    return possCom.toArray
+  def findSeqMatchesSum1(vals: Array[Int],sum:Int): Array[String] = {
+    {for( i <- vals.indices; j <- i+1 until vals.length if vals(i) + vals (j) == sum  )
+      yield vals(i)+","+vals(j)}.toArray
   }
 
   def findSeqMatchesSum(vals:Array[Int],sum:Int): Array[String] = {
     var poosibleComb = new ListBuffer[String]
-    for (i <- 0 to vals.length-1){
+    for (i <- vals.indices){
       var num1 = vals(i)
-      for (j <- i+1 to vals.length-1){
+      for (j <- i+1 until vals.length){
         var num2 = vals(j)
         if((num1 + num2) == sum)
           if(!poosibleComb.contains(num1 +","+num2))

@@ -1,5 +1,3 @@
-package basics
-
 /**
   * Created by Kiran on 02-01-2019.
   */

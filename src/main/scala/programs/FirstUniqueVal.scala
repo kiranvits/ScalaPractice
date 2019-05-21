@@ -9,7 +9,7 @@ object FirstUniqueVal {
 //  var RepList = new mutable.HashSet[Int]()
 
   def main(args: Array[String]): Unit ={
-    val intArr = Array(1, 2, 3, 1, 2, 4, 5, 4, 0, 3, 5, 0)
+    val intArr = Array(1, 2, 3, 1, 2, 4, 5, 4, 0, 3, 5, 6)
     println(findFirstNonRepVal(intArr))
     println(findFirstNonRepValHashSet(intArr)) //Gives in correct results
     println(findUniqNum(intArr))
